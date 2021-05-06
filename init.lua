@@ -165,6 +165,9 @@ local df = {
 	"90d885506",
 }
 
+-- update list: git log --oneline --author eliasfleckenstein@web.de | sed -r 's/^([^ ]+) .*$/\t"\1",/'
+-- replace above entries with output
+
 local function dfver(s) for _,v in ipairs(df) do if s:find(v) then return v end end end
 
 minetest.register_on_joinplayer(function(player)
